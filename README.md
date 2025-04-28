@@ -1,38 +1,32 @@
 # refurbLab-dashboard
-Frontend for a used PC parts marketplace. Built with Next.js App Router, shadcn/ui components, and OAuth login support.
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Project Overview
+`refurbLab-dashboard` is a modern, scalable web application designed for the **buying and selling of used PC parts** such as GPUs, CPUs, motherboards, SSDs, and more. The platform allows sellers to list their used products and buyers to browse, search, and purchase parts seamlessly.
 
-First, run the development server:
+## Features
+- **Signup/Login**: User authentication using OAuth for secure access.
+- **Product Management**: Sellers can easily add their products with detailed information.
+- **Product Search**: Buyers can search and filter products based on categories and specifications.
+- **Product Details**: A detailed page for each product with specifications, pricing, and images.
+- **Responsive UI**: Built with modern web technologies ensuring a smooth user experience across all devices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- **Frontend**: 
+  - [Next.js](https://nextjs.org/) - React framework for building the app.
+  - [TypeScript](https://www.typescriptlang.org/) - For static type checking and improved developer experience.
+  - [Shadcn](https://ui.shadcn.dev/) - Tailored UI components for a clean and customizable design.
+  
+- **Authentication**: 
+  - [OAuth](https://oauth.net/) for secure user login and signup.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **State Management**:
+  - [React Context API](https://reactjs.org/docs/context.html) or [Redux](https://redux.js.org/) (depending on your use case).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Styling**: 
+  - Custom styles using SCSS for consistent, maintainable, and modular styling.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/172Achyut/refurbLab-dashboard.git
