@@ -33,39 +33,7 @@
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/172Achyut/refurbLab-dashboard.git
-   ```
 
-## Running with Docker
-
-You can run the entire refurbLab-dashboard project (frontend, backend, and database) using Docker Compose. This makes it easy to get the app up and running without manually installing dependencies or setting up the environment.
-
-### Steps
-
-1. Make sure you have Docker and Docker Compose installed.
-
-2. From the root directory of the project (where your `docker-compose.yml` file is located), run:
-   ```bash
-   docker compose up -d --build
-   ```
-
-   This will:
-   - Build the Docker images for frontend and backend.
-   - Start the containers for the frontend, backend, and the PostgreSQL database.
-   - Run everything in detached mode (`-d`), so it runs in the background.
-
-3. Once started, access the frontend dashboard at:  
-   [http://localhost:3000](http://localhost:3000)
-
-4. To view logs for a specific service, use:
-   ```bash
-   docker logs -f <container_name>
-   ```
-   Example to follow frontend logs:
-   ```bash
-   docker logs -f refurblab_dashboard
-   ```
-
-5. To stop all running containers:
-   ```bash
-   docker compose down
-   ```
+##Run the Project
+  ```bash
+  
