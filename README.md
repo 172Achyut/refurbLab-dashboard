@@ -1,39 +1,145 @@
 # refurbLab-dashboard
 
-## Project Overview
+Frontend for a used PC parts marketplace. Built with Next.js App Router, shadcn/ui components, and OAuth login support.
+
+---
+
+## 🚀 Project Overview
 
 `refurbLab-dashboard` is a modern, scalable web application designed for the **buying and selling of used PC parts** such as GPUs, CPUs, motherboards, SSDs, and more. The platform allows sellers to list their used products and buyers to browse, search, and purchase parts seamlessly.
 
-## Features
+---
 
-- **Signup/Login**: User authentication using OAuth for secure access.
-- **Product Management**: Sellers can easily add their products with detailed information.
+## 🧩 Features
+
+- **User Authentication**: Secure login/signup using OAuth.
+- **Product Management**: Sellers can add, edit, and delete product listings.
 - **Product Search**: Buyers can search and filter products based on categories and specifications.
-- **Product Details**: A detailed page for each product with specifications, pricing, and images.
-- **Responsive UI**: Built with modern web technologies ensuring a smooth user experience across all devices.
+- **Product Details**: Detailed view for each product with specifications, pricing, and images.
+- **Responsive UI**: Optimized for all devices using modern UI components.
 
-## Tech Stack
+---
 
-- **Frontend**:  
-  - [Next.js](https://nextjs.org/) – React framework for building the app  
-  - [TypeScript](https://www.typescriptlang.org/) – For static type checking and improved developer experience  
-  - [Shadcn](https://ui.shadcn.dev/) – Tailored UI components for a clean and customizable design
+## 🛠️ Tech Stack
 
-- **Authentication**:  
-  - [OAuth](https://oauth.net/) for secure user login and signup
+- **Frontend**:
+  - [Next.js](https://nextjs.org/) with App Router
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [shadcn/ui](https://ui.shadcn.dev/) for UI components
+- **Authentication**:
+  - OAuth integration
+- **Styling**:
+  - SCSS for modular and maintainable styles
 
-- **State Management**:  
-  - [React Context API](https://reactjs.org/docs/context.html) or [Redux](https://redux.js.org/) (depending on your use case)
+---
 
-- **Styling**:  
-  - Custom styles using SCSS for consistent, maintainable, and modular styling
+## 📦 Installation
 
-## Installation
+### Prerequisites
 
-1. **Clone the repository:**
+- Node.js (v18+)
+- Docker & Docker Compose
+
+### Steps
+
+1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/172Achyut/refurbLab-dashboard.git
+   cd refurbLab-dashboard
+   ```
 
-##Run the Project
-  ```bash
-  
+2. **Set up environment variables**:
+
+   Create a `.env` file in the root directory and add necessary environment variables.
+
+3. **Run the application using Docker Compose**:
+
+   ```bash
+   docker compose up --build -d
+   ```
+
+   This will build and start the frontend container.
+
+4. **Access the application**:
+
+   Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+---
+
+## 🐳 Docker Configuration
+
+The project includes a `Dockerfile` for containerizing the Next.js application.
+
+**Dockerfile**:
+
+```dockerfile
+# Use node base image
+FROM node:18-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files and install dependencies
+COPY package*.json ./
+RUN npm ci
+
+# Copy all source files
+COPY . .
+
+# Build the Next.js project
+RUN npm run build
+
+# Expose frontend port
+EXPOSE 3000
+
+# Start the Next.js app in production mode
+CMD ["npm", "start"]
+```
+
+**Docker Compose Service**:
+
+```yaml
+frontend:
+  build:
+    context: .
+    dockerfile: Dockerfile
+  container_name: refurblab_dashboard
+  env_file:
+    - .env
+  ports:
+    - "3000:3000"
+```
+
+---
+
+## 📁 Project Structure
+
+```bash
+refurbLab-dashboard/
+├── public/
+├── src/
+│   ├── app/
+│   ├── components/
+│   └── styles/
+├── .env
+├── Dockerfile
+├── docker-compose.yml
+├── next.config.ts
+├── package.json
+└── README.md
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
