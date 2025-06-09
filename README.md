@@ -52,6 +52,7 @@ Frontend for a used PC parts marketplace. Built with Next.js App Router, shadcn/
 2. **Set up environment variables**:
 
    Create a `.env` file in the root directory and add necessary environment variables.
+   For AuthO setup, in root directory for dashboard repo, create a .env.local file and AUTH0_SECRET,APP_BASE_URL,AUTH0_DOMAIN,AUTH0_CLIENT_ID,AUTH0_CLIENT_SECRET as shared
 
 3. **Run the application using Docker Compose**:
 
